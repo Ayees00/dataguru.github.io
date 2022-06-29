@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{judul}}
+{% endblock title %}
+
+
+{% block contents %}
+    <div class="container mt-5">
+        <h1 align="center">{{judul}}</h1>
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-md-5">
+                <form method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{isi.as_table}}
+                    </table>
+                    <br>
+                    <button class="btn btn-primary" type="submit"><i class="bi bi-save"></i> Simpan</button>
+                    <a href="/DataGuru/list" class="btn btn-warning"><i class="bi bi-x-circle"></i> Kembali</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+
+{% endblock contents %}

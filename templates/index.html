@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{judul}}
+{% endblock title %}
+
+{% block contents %}
+{% load static %}
+    <h1 align="center">SELAMAT DATANG</h1> <br><br>
+    <div class="col-md-12">
+        <div class="row justify-conten-center">
+            <div class="col-md-8">
+                <img src="{% static 'img/guru1.jpg' %}" alt="" width="80%">
+            </div>
+            <div class="col-md-4">
+                <h1 class="card-title" style="text-align: left; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px;"><b>Yakin, Ikhlas, istiqkomah</b></h1>
+                <p class="card-text">Mari Kita Cerdaskan Pemimpin-Pemimpin Masa Depan</p>
+                <a href="/DataGuru/list" class="btn btn-primary" style="font-size: 30px;">Daftar Guru</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-12">
+        <div class="row justify-conten-center">
+            <div class="col-md-6">
+                <div class="card" style="width: 30rem;">
+                    <img src="{% static 'img/siswa.jpg' %}" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <p class="card-text">Siswa-siswi dalam kegiatan apel pagi di hari senin</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 30rem;">
+                    <img src="{% static 'img/belajar.jpg' %}" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <p class="card-text">Kegiatan Belajar Mengajar SDN 6 Sepit</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+{% endblock contents %}
